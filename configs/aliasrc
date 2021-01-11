@@ -1,0 +1,31 @@
+alias cd..="cd .."
+alias ps="ps auxf --forest"
+alias vim="nvim -p"
+alias cmatrix="cmatrix -C magenta"
+
+alias rm="rm -i"
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir="mkdir -pv"
+
+
+alias ll="ls -ltrh"
+alias la="ls -ltrah"
+alias l="ls -ltrh"
+
+alias i3rc='${=EDITOR} ~/.config/i3'
+alias zshrc='${=EDITOR} ~/.zshrc'
+alias nvimrc='${=EDITOR} ~/.config/nvim/init.vim'
+alias aliasrc='${=EDITOR} ~/.config/aliasrc'
+alias sshrc='${=EDITOR} ~/.ssh/config'
+
+alias http='python -m http.server 9000'
+
+###
+alias cdd='ranger'
+
+##### WORK
+alias upvpn='sudo openvpn --config pfSense-UDP4-1194-wallace.gentil.ovpn --auth-user-pass ./pass.txt'
+alias kux='kubectl ctx'
+
+alias pp='cd /projects'
