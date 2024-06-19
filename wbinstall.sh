@@ -22,16 +22,6 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-# Custom Ubuntu with i3
-printf "%-80s" "Apt repository regolith and install "
-wget -qO - https://regolith-desktop.org/regolith.key | \
-gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
-echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-https://regolith-desktop.org/release-3_1-ubuntu-mantic-amd64 mantic main" | \
-sudo tee /etc/apt/sources.list.d/regolith.list
-sudo apt update
-sudo apt install regolith-desktop regolith-session-flashback regolith-look-i3-default
-check $?
 
 printf "%-80s" "Apt repository regolith i3 bar"
 sudo apt install i3xrocks-net-traffic i3xrocks-cpu-usage i3xrocks-time
